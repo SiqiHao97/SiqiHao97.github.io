@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Build settings
 
 markdown: kramdown
@@ -15,3 +16,6 @@ sass:
 title:		           "Portfolio Jekyll Theme"
 description:	       "Powered by Jekyll and GitHub Pages"
 author:              "Paul Le"
+=======
+theme: jekyll-theme-cayman
+>>>>>>> ecb1f648abdc8c703d0f1a4c0127a989b4e00866
