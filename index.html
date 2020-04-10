@@ -1,8 +1,21 @@
-<p>Hello 大家好</p>
-<p>我是Siqi，这是我的个人网站。 </p>
-<p>很高兴你来到这里, 你可以在以下的网站找到我</p>
+---
+layout: home-page
+---
+<ol class="post-card-box clearfix">
+  {% for post in paginator.posts %}
+  <li>
+    <div class="post-card">
+      <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" style="background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : post.img}} )">
+      </a>
 
-<ul>
-  <li> <a href="https://www.zhihu.com/people/AJLoveChina">知乎</a> </li>
-  <li> <a href="http://hejie.nigeerhuo.com">我的博客(已经不更细了,现在在知乎写文章)</a> </li>
-</ul>
+      <div class="post-card-body">
+        {% for tag in post.tags %}
+        <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">|&#32;{{ tag }}</a>
+        {% endfor %}
+        <a href="{{post.url | prepend: site.baseurl}}" class="post-card-link"><h3 class="post-card-title">{{post.title}}</h3></a>
+      </div>
+
+    </div>
+  </li>
+  {% endfor %}
+</ol>
